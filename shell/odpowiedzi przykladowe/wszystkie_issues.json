@@ -1,0 +1,855 @@
+{
+    "expand": "schema,names",
+    "startAt": 0,
+    "maxResults": 50,
+    "total": 5,
+    "issues": [
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,customfield_10010.requestTypePractice,renderedFields",
+            "id": "10022",
+            "self": "https://vizards.atlassian.net/rest/api/3/issue/10022",
+            "key": "VIRA-5",
+            "fields": {
+                "statuscategorychangedate": "2023-11-15T22:18:40.006+0100",
+                "issuetype": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/issuetype/10003",
+                    "id": "10003",
+                    "description": "Tasks track small, distinct pieces of work.",
+                    "iconUrl": "https://vizards.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+                    "name": "Task",
+                    "subtask": false,
+                    "avatarId": 10318,
+                    "entityId": "35a3540b-94dd-4ee8-9a4b-f42a68314a36",
+                    "hierarchyLevel": 0
+                },
+                "timespent": null,
+                "customfield_10030": null,
+                "project": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/project/10001",
+                    "id": "10001",
+                    "key": "VIRA",
+                    "name": "ViRa",
+                    "projectTypeKey": "software",
+                    "simplified": true,
+                    "avatarUrls": {
+                        "48x48": "https://vizards.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10412",
+                        "24x24": "https://vizards.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10412?size=small",
+                        "16x16": "https://vizards.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10412?size=xsmall",
+                        "32x32": "https://vizards.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10412?size=medium"
+                    }
+                },
+                "customfield_10031": null,
+                "fixVersions": [],
+                "aggregatetimespent": null,
+                "resolution": null,
+                "customfield_10027": null,
+                "customfield_10028": null,
+                "customfield_10029": null,
+                "resolutiondate": null,
+                "workratio": -1,
+                "lastViewed": null,
+                "watches": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/issue/VIRA-5/watchers",
+                    "watchCount": 1,
+                    "isWatching": true
+                },
+                "created": "2023-11-15T22:18:39.578+0100",
+                "customfield_10020": null,
+                "customfield_10021": null,
+                "customfield_10022": null,
+                "customfield_10023": null,
+                "priority": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/priority/3",
+                    "iconUrl": "https://vizards.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "customfield_10024": null,
+                "customfield_10025": null,
+                "labels": [],
+                "customfield_10026": null,
+                "customfield_10016": null,
+                "customfield_10017": null,
+                "customfield_10018": {
+                    "hasEpicLinkFieldDependency": false,
+                    "showField": false,
+                    "nonEditableReason": {
+                        "reason": "PLUGIN_LICENSE_ERROR",
+                        "message": "The Parent Link is only available to Jira Premium users."
+                    }
+                },
+                "customfield_10019": "0|i0003r:",
+                "aggregatetimeoriginalestimate": null,
+                "timeestimate": null,
+                "versions": [],
+                "issuelinks": [],
+                "assignee": null,
+                "updated": "2023-11-15T22:18:39.918+0100",
+                "status": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/status/10007",
+                    "description": "",
+                    "iconUrl": "https://vizards.atlassian.net/",
+                    "name": "To Do",
+                    "id": "10007",
+                    "statusCategory": {
+                        "self": "https://vizards.atlassian.net/rest/api/3/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                },
+                "components": [],
+                "timeoriginalestimate": null,
+                "description": null,
+                "customfield_10010": null,
+                "customfield_10014": null,
+                "customfield_10015": null,
+                "customfield_10005": null,
+                "customfield_10006": null,
+                "security": null,
+                "customfield_10007": null,
+                "customfield_10008": null,
+                "aggregatetimeestimate": null,
+                "customfield_10009": null,
+                "summary": "tester_3",
+                "creator": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/user?accountId=712020%3A4ef59611-dd3b-4f1a-80ae-22769f921b3b",
+                    "accountId": "712020:4ef59611-dd3b-4f1a-80ae-22769f921b3b",
+                    "emailAddress": "damian.raczkowski@vizards.it",
+                    "avatarUrls": {
+                        "48x48": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "24x24": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "16x16": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "32x32": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png"
+                    },
+                    "displayName": "Damian Raczkowski",
+                    "active": true,
+                    "timeZone": "Europe/Warsaw",
+                    "accountType": "atlassian"
+                },
+                "subtasks": [],
+                "reporter": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/user?accountId=712020%3A4ef59611-dd3b-4f1a-80ae-22769f921b3b",
+                    "accountId": "712020:4ef59611-dd3b-4f1a-80ae-22769f921b3b",
+                    "emailAddress": "damian.raczkowski@vizards.it",
+                    "avatarUrls": {
+                        "48x48": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "24x24": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "16x16": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "32x32": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png"
+                    },
+                    "displayName": "Damian Raczkowski",
+                    "active": true,
+                    "timeZone": "Europe/Warsaw",
+                    "accountType": "atlassian"
+                },
+                "aggregateprogress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "customfield_10001": null,
+                "customfield_10002": null,
+                "customfield_10003": null,
+                "customfield_10004": null,
+                "environment": null,
+                "duedate": null,
+                "progress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "votes": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/issue/VIRA-5/votes",
+                    "votes": 0,
+                    "hasVoted": false
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,customfield_10010.requestTypePractice,renderedFields",
+            "id": "10020",
+            "self": "https://vizards.atlassian.net/rest/api/3/issue/10020",
+            "key": "VIRA-4",
+            "fields": {
+                "statuscategorychangedate": "2023-11-02T22:43:57.354+0100",
+                "issuetype": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/issuetype/10003",
+                    "id": "10003",
+                    "description": "Tasks track small, distinct pieces of work.",
+                    "iconUrl": "https://vizards.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+                    "name": "Task",
+                    "subtask": false,
+                    "avatarId": 10318,
+                    "entityId": "35a3540b-94dd-4ee8-9a4b-f42a68314a36",
+                    "hierarchyLevel": 0
+                },
+                "timespent": null,
+                "customfield_10030": null,
+                "customfield_10031": null,
+                "project": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/project/10001",
+                    "id": "10001",
+                    "key": "VIRA",
+                    "name": "ViRa",
+                    "projectTypeKey": "software",
+                    "simplified": true,
+                    "avatarUrls": {
+                        "48x48": "https://vizards.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10412",
+                        "24x24": "https://vizards.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10412?size=small",
+                        "16x16": "https://vizards.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10412?size=xsmall",
+                        "32x32": "https://vizards.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10412?size=medium"
+                    }
+                },
+                "fixVersions": [],
+                "aggregatetimespent": null,
+                "resolution": null,
+                "customfield_10027": null,
+                "customfield_10028": null,
+                "customfield_10029": null,
+                "resolutiondate": null,
+                "workratio": -1,
+                "watches": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/issue/VIRA-4/watchers",
+                    "watchCount": 1,
+                    "isWatching": true
+                },
+                "lastViewed": null,
+                "created": "2023-11-02T22:43:57.090+0100",
+                "customfield_10020": null,
+                "customfield_10021": null,
+                "customfield_10022": null,
+                "customfield_10023": null,
+                "priority": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/priority/3",
+                    "iconUrl": "https://vizards.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "customfield_10024": null,
+                "customfield_10025": null,
+                "labels": [],
+                "customfield_10026": null,
+                "customfield_10016": null,
+                "customfield_10017": null,
+                "customfield_10018": {
+                    "hasEpicLinkFieldDependency": false,
+                    "showField": false,
+                    "nonEditableReason": {
+                        "reason": "PLUGIN_LICENSE_ERROR",
+                        "message": "The Parent Link is only available to Jira Premium users."
+                    }
+                },
+                "customfield_10019": "0|i0003j:",
+                "timeestimate": null,
+                "aggregatetimeoriginalestimate": null,
+                "versions": [],
+                "issuelinks": [],
+                "assignee": null,
+                "updated": "2023-11-02T22:43:57.292+0100",
+                "status": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/status/10007",
+                    "description": "",
+                    "iconUrl": "https://vizards.atlassian.net/",
+                    "name": "To Do",
+                    "id": "10007",
+                    "statusCategory": {
+                        "self": "https://vizards.atlassian.net/rest/api/3/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                },
+                "components": [],
+                "timeoriginalestimate": null,
+                "description": null,
+                "customfield_10010": null,
+                "customfield_10014": null,
+                "customfield_10015": null,
+                "customfield_10005": null,
+                "customfield_10006": null,
+                "customfield_10007": null,
+                "security": null,
+                "customfield_10008": null,
+                "aggregatetimeestimate": null,
+                "customfield_10009": null,
+                "summary": "test_3",
+                "creator": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/user?accountId=712020%3A4ef59611-dd3b-4f1a-80ae-22769f921b3b",
+                    "accountId": "712020:4ef59611-dd3b-4f1a-80ae-22769f921b3b",
+                    "emailAddress": "damian.raczkowski@vizards.it",
+                    "avatarUrls": {
+                        "48x48": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "24x24": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "16x16": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "32x32": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png"
+                    },
+                    "displayName": "Damian Raczkowski",
+                    "active": true,
+                    "timeZone": "Europe/Warsaw",
+                    "accountType": "atlassian"
+                },
+                "subtasks": [],
+                "reporter": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/user?accountId=712020%3A4ef59611-dd3b-4f1a-80ae-22769f921b3b",
+                    "accountId": "712020:4ef59611-dd3b-4f1a-80ae-22769f921b3b",
+                    "emailAddress": "damian.raczkowski@vizards.it",
+                    "avatarUrls": {
+                        "48x48": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "24x24": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "16x16": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "32x32": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png"
+                    },
+                    "displayName": "Damian Raczkowski",
+                    "active": true,
+                    "timeZone": "Europe/Warsaw",
+                    "accountType": "atlassian"
+                },
+                "aggregateprogress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "customfield_10001": null,
+                "customfield_10002": null,
+                "customfield_10003": null,
+                "customfield_10004": null,
+                "environment": null,
+                "duedate": null,
+                "progress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "votes": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/issue/VIRA-4/votes",
+                    "votes": 0,
+                    "hasVoted": false
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,customfield_10010.requestTypePractice,renderedFields",
+            "id": "10019",
+            "self": "https://vizards.atlassian.net/rest/api/3/issue/10019",
+            "key": "VIRA-3",
+            "fields": {
+                "statuscategorychangedate": "2023-11-02T22:43:21.840+0100",
+                "issuetype": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/issuetype/10003",
+                    "id": "10003",
+                    "description": "Tasks track small, distinct pieces of work.",
+                    "iconUrl": "https://vizards.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+                    "name": "Task",
+                    "subtask": false,
+                    "avatarId": 10318,
+                    "entityId": "35a3540b-94dd-4ee8-9a4b-f42a68314a36",
+                    "hierarchyLevel": 0
+                },
+                "timespent": null,
+                "customfield_10030": null,
+                "customfield_10031": null,
+                "project": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/project/10001",
+                    "id": "10001",
+                    "key": "VIRA",
+                    "name": "ViRa",
+                    "projectTypeKey": "software",
+                    "simplified": true,
+                    "avatarUrls": {
+                        "48x48": "https://vizards.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10412",
+                        "24x24": "https://vizards.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10412?size=small",
+                        "16x16": "https://vizards.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10412?size=xsmall",
+                        "32x32": "https://vizards.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10412?size=medium"
+                    }
+                },
+                "fixVersions": [],
+                "aggregatetimespent": null,
+                "resolution": null,
+                "customfield_10027": null,
+                "customfield_10028": null,
+                "customfield_10029": null,
+                "resolutiondate": null,
+                "workratio": -1,
+                "watches": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/issue/VIRA-3/watchers",
+                    "watchCount": 1,
+                    "isWatching": true
+                },
+                "lastViewed": null,
+                "created": "2023-11-02T22:43:21.519+0100",
+                "customfield_10020": null,
+                "customfield_10021": null,
+                "customfield_10022": null,
+                "customfield_10023": null,
+                "priority": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/priority/3",
+                    "iconUrl": "https://vizards.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "customfield_10024": null,
+                "customfield_10025": null,
+                "labels": [],
+                "customfield_10026": null,
+                "customfield_10016": null,
+                "customfield_10017": null,
+                "customfield_10018": {
+                    "hasEpicLinkFieldDependency": false,
+                    "showField": false,
+                    "nonEditableReason": {
+                        "reason": "PLUGIN_LICENSE_ERROR",
+                        "message": "The Parent Link is only available to Jira Premium users."
+                    }
+                },
+                "customfield_10019": "0|i0003b:",
+                "aggregatetimeoriginalestimate": null,
+                "timeestimate": null,
+                "versions": [],
+                "issuelinks": [],
+                "assignee": null,
+                "updated": "2023-11-02T22:43:21.718+0100",
+                "status": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/status/10007",
+                    "description": "",
+                    "iconUrl": "https://vizards.atlassian.net/",
+                    "name": "To Do",
+                    "id": "10007",
+                    "statusCategory": {
+                        "self": "https://vizards.atlassian.net/rest/api/3/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                },
+                "components": [],
+                "timeoriginalestimate": null,
+                "description": {
+                    "type": "doc",
+                    "version": 1,
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "content": [
+                                {
+                                    "type": "text",
+                                    "text": "description"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "customfield_10010": null,
+                "customfield_10014": null,
+                "customfield_10015": null,
+                "customfield_10005": null,
+                "customfield_10006": null,
+                "customfield_10007": null,
+                "security": null,
+                "customfield_10008": null,
+                "customfield_10009": null,
+                "aggregatetimeestimate": null,
+                "summary": "REST ye merry gentlemen.",
+                "creator": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/user?accountId=712020%3A4ef59611-dd3b-4f1a-80ae-22769f921b3b",
+                    "accountId": "712020:4ef59611-dd3b-4f1a-80ae-22769f921b3b",
+                    "emailAddress": "damian.raczkowski@vizards.it",
+                    "avatarUrls": {
+                        "48x48": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "24x24": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "16x16": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "32x32": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png"
+                    },
+                    "displayName": "Damian Raczkowski",
+                    "active": true,
+                    "timeZone": "Europe/Warsaw",
+                    "accountType": "atlassian"
+                },
+                "subtasks": [],
+                "reporter": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/user?accountId=712020%3A4ef59611-dd3b-4f1a-80ae-22769f921b3b",
+                    "accountId": "712020:4ef59611-dd3b-4f1a-80ae-22769f921b3b",
+                    "emailAddress": "damian.raczkowski@vizards.it",
+                    "avatarUrls": {
+                        "48x48": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "24x24": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "16x16": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "32x32": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png"
+                    },
+                    "displayName": "Damian Raczkowski",
+                    "active": true,
+                    "timeZone": "Europe/Warsaw",
+                    "accountType": "atlassian"
+                },
+                "aggregateprogress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "customfield_10001": null,
+                "customfield_10002": null,
+                "customfield_10003": null,
+                "customfield_10004": null,
+                "environment": null,
+                "duedate": null,
+                "progress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "votes": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/issue/VIRA-3/votes",
+                    "votes": 0,
+                    "hasVoted": false
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,customfield_10010.requestTypePractice,renderedFields",
+            "id": "10018",
+            "self": "https://vizards.atlassian.net/rest/api/3/issue/10018",
+            "key": "VIRA-2",
+            "fields": {
+                "statuscategorychangedate": "2023-11-15T23:01:20.062+0100",
+                "issuetype": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/issuetype/10003",
+                    "id": "10003",
+                    "description": "Tasks track small, distinct pieces of work.",
+                    "iconUrl": "https://vizards.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+                    "name": "Task",
+                    "subtask": false,
+                    "avatarId": 10318,
+                    "entityId": "35a3540b-94dd-4ee8-9a4b-f42a68314a36",
+                    "hierarchyLevel": 0
+                },
+                "timespent": null,
+                "customfield_10030": null,
+                "project": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/project/10001",
+                    "id": "10001",
+                    "key": "VIRA",
+                    "name": "ViRa",
+                    "projectTypeKey": "software",
+                    "simplified": true,
+                    "avatarUrls": {
+                        "48x48": "https://vizards.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10412",
+                        "24x24": "https://vizards.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10412?size=small",
+                        "16x16": "https://vizards.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10412?size=xsmall",
+                        "32x32": "https://vizards.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10412?size=medium"
+                    }
+                },
+                "customfield_10031": null,
+                "fixVersions": [],
+                "aggregatetimespent": null,
+                "resolution": null,
+                "customfield_10027": null,
+                "customfield_10028": null,
+                "customfield_10029": null,
+                "resolutiondate": null,
+                "workratio": -1,
+                "watches": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/issue/VIRA-2/watchers",
+                    "watchCount": 1,
+                    "isWatching": true
+                },
+                "lastViewed": "2023-11-15T22:17:27.395+0100",
+                "created": "2023-11-02T22:34:24.355+0100",
+                "customfield_10020": null,
+                "customfield_10021": null,
+                "customfield_10022": null,
+                "customfield_10023": null,
+                "priority": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/priority/3",
+                    "iconUrl": "https://vizards.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "customfield_10024": null,
+                "customfield_10025": null,
+                "labels": [],
+                "customfield_10026": null,
+                "customfield_10016": null,
+                "customfield_10017": null,
+                "customfield_10018": {
+                    "hasEpicLinkFieldDependency": false,
+                    "showField": false,
+                    "nonEditableReason": {
+                        "reason": "PLUGIN_LICENSE_ERROR",
+                        "message": "The Parent Link is only available to Jira Premium users."
+                    }
+                },
+                "customfield_10019": "0|i00033:",
+                "aggregatetimeoriginalestimate": null,
+                "timeestimate": null,
+                "versions": [],
+                "issuelinks": [],
+                "assignee": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/user?accountId=712020%3A4ef59611-dd3b-4f1a-80ae-22769f921b3b",
+                    "accountId": "712020:4ef59611-dd3b-4f1a-80ae-22769f921b3b",
+                    "emailAddress": "damian.raczkowski@vizards.it",
+                    "avatarUrls": {
+                        "48x48": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "24x24": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "16x16": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "32x32": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png"
+                    },
+                    "displayName": "Damian Raczkowski",
+                    "active": true,
+                    "timeZone": "Europe/Warsaw",
+                    "accountType": "atlassian"
+                },
+                "updated": "2023-11-15T23:01:20.062+0100",
+                "status": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/status/10008",
+                    "description": "",
+                    "iconUrl": "https://vizards.atlassian.net/",
+                    "name": "In Progress",
+                    "id": "10008",
+                    "statusCategory": {
+                        "self": "https://vizards.atlassian.net/rest/api/3/statuscategory/4",
+                        "id": 4,
+                        "key": "indeterminate",
+                        "colorName": "yellow",
+                        "name": "In Progress"
+                    }
+                },
+                "components": [],
+                "timeoriginalestimate": null,
+                "description": null,
+                "customfield_10010": null,
+                "customfield_10014": null,
+                "customfield_10015": null,
+                "customfield_10005": null,
+                "customfield_10006": null,
+                "customfield_10007": null,
+                "security": null,
+                "customfield_10008": null,
+                "customfield_10009": null,
+                "aggregatetimeestimate": null,
+                "summary": "TEST_2",
+                "creator": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/user?accountId=712020%3A4ef59611-dd3b-4f1a-80ae-22769f921b3b",
+                    "accountId": "712020:4ef59611-dd3b-4f1a-80ae-22769f921b3b",
+                    "emailAddress": "damian.raczkowski@vizards.it",
+                    "avatarUrls": {
+                        "48x48": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "24x24": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "16x16": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "32x32": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png"
+                    },
+                    "displayName": "Damian Raczkowski",
+                    "active": true,
+                    "timeZone": "Europe/Warsaw",
+                    "accountType": "atlassian"
+                },
+                "subtasks": [],
+                "reporter": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/user?accountId=712020%3A4ef59611-dd3b-4f1a-80ae-22769f921b3b",
+                    "accountId": "712020:4ef59611-dd3b-4f1a-80ae-22769f921b3b",
+                    "emailAddress": "damian.raczkowski@vizards.it",
+                    "avatarUrls": {
+                        "48x48": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "24x24": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "16x16": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "32x32": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png"
+                    },
+                    "displayName": "Damian Raczkowski",
+                    "active": true,
+                    "timeZone": "Europe/Warsaw",
+                    "accountType": "atlassian"
+                },
+                "aggregateprogress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "customfield_10001": null,
+                "customfield_10002": null,
+                "customfield_10003": null,
+                "customfield_10004": null,
+                "environment": null,
+                "duedate": null,
+                "progress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "votes": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/issue/VIRA-2/votes",
+                    "votes": 0,
+                    "hasVoted": false
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,customfield_10010.requestTypePractice,renderedFields",
+            "id": "10017",
+            "self": "https://vizards.atlassian.net/rest/api/3/issue/10017",
+            "key": "VIRA-1",
+            "fields": {
+                "statuscategorychangedate": "2023-11-02T21:50:24.580+0100",
+                "issuetype": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/issuetype/10003",
+                    "id": "10003",
+                    "description": "Tasks track small, distinct pieces of work.",
+                    "iconUrl": "https://vizards.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+                    "name": "Task",
+                    "subtask": false,
+                    "avatarId": 10318,
+                    "entityId": "35a3540b-94dd-4ee8-9a4b-f42a68314a36",
+                    "hierarchyLevel": 0
+                },
+                "timespent": null,
+                "customfield_10030": null,
+                "project": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/project/10001",
+                    "id": "10001",
+                    "key": "VIRA",
+                    "name": "ViRa",
+                    "projectTypeKey": "software",
+                    "simplified": true,
+                    "avatarUrls": {
+                        "48x48": "https://vizards.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10412",
+                        "24x24": "https://vizards.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10412?size=small",
+                        "16x16": "https://vizards.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10412?size=xsmall",
+                        "32x32": "https://vizards.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10412?size=medium"
+                    }
+                },
+                "customfield_10031": null,
+                "fixVersions": [],
+                "aggregatetimespent": null,
+                "resolution": null,
+                "customfield_10027": null,
+                "customfield_10028": null,
+                "customfield_10029": null,
+                "resolutiondate": null,
+                "workratio": -1,
+                "watches": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/issue/VIRA-1/watchers",
+                    "watchCount": 1,
+                    "isWatching": true
+                },
+                "lastViewed": "2023-11-15T22:41:33.237+0100",
+                "created": "2023-11-02T21:50:24.181+0100",
+                "customfield_10020": null,
+                "customfield_10021": null,
+                "customfield_10022": null,
+                "priority": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/priority/3",
+                    "iconUrl": "https://vizards.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "customfield_10023": null,
+                "customfield_10024": null,
+                "customfield_10025": null,
+                "labels": [],
+                "customfield_10026": null,
+                "customfield_10016": null,
+                "customfield_10017": null,
+                "customfield_10018": {
+                    "hasEpicLinkFieldDependency": false,
+                    "showField": false,
+                    "nonEditableReason": {
+                        "reason": "PLUGIN_LICENSE_ERROR",
+                        "message": "The Parent Link is only available to Jira Premium users."
+                    }
+                },
+                "customfield_10019": "0|i0002v:",
+                "timeestimate": null,
+                "aggregatetimeoriginalestimate": null,
+                "versions": [],
+                "issuelinks": [],
+                "assignee": null,
+                "updated": "2023-11-15T23:03:16.690+0100",
+                "status": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/status/10007",
+                    "description": "",
+                    "iconUrl": "https://vizards.atlassian.net/",
+                    "name": "To Do",
+                    "id": "10007",
+                    "statusCategory": {
+                        "self": "https://vizards.atlassian.net/rest/api/3/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                },
+                "components": [],
+                "timeoriginalestimate": null,
+                "description": {
+                    "version": 1,
+                    "type": "doc",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "content": [
+                                {
+                                    "type": "text",
+                                    "text": "Cokolwiek"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "customfield_10010": null,
+                "customfield_10014": null,
+                "customfield_10015": null,
+                "customfield_10005": null,
+                "customfield_10006": null,
+                "security": null,
+                "customfield_10007": null,
+                "customfield_10008": null,
+                "customfield_10009": null,
+                "aggregatetimeestimate": null,
+                "summary": "Update Summary",
+                "creator": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/user?accountId=712020%3A4ef59611-dd3b-4f1a-80ae-22769f921b3b",
+                    "accountId": "712020:4ef59611-dd3b-4f1a-80ae-22769f921b3b",
+                    "emailAddress": "damian.raczkowski@vizards.it",
+                    "avatarUrls": {
+                        "48x48": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "24x24": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "16x16": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "32x32": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png"
+                    },
+                    "displayName": "Damian Raczkowski",
+                    "active": true,
+                    "timeZone": "Europe/Warsaw",
+                    "accountType": "atlassian"
+                },
+                "subtasks": [],
+                "reporter": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/user?accountId=712020%3A4ef59611-dd3b-4f1a-80ae-22769f921b3b",
+                    "accountId": "712020:4ef59611-dd3b-4f1a-80ae-22769f921b3b",
+                    "emailAddress": "damian.raczkowski@vizards.it",
+                    "avatarUrls": {
+                        "48x48": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "24x24": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "16x16": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png",
+                        "32x32": "https://secure.gravatar.com/avatar/0ca56c571e57e32fe3cb3ac36bcbce42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDR-4.png"
+                    },
+                    "displayName": "Damian Raczkowski",
+                    "active": true,
+                    "timeZone": "Europe/Warsaw",
+                    "accountType": "atlassian"
+                },
+                "aggregateprogress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "customfield_10001": null,
+                "customfield_10002": null,
+                "customfield_10003": null,
+                "customfield_10004": null,
+                "environment": null,
+                "duedate": null,
+                "progress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "votes": {
+                    "self": "https://vizards.atlassian.net/rest/api/3/issue/VIRA-1/votes",
+                    "votes": 0,
+                    "hasVoted": false
+                }
+            }
+        }
+    ]
+}
