@@ -6,6 +6,8 @@
 *.lo
 *.o
 *.obj
+# include trashcan's model
+!**/trash/*.obj
 
 # Precompiled Headers
 *.gch
