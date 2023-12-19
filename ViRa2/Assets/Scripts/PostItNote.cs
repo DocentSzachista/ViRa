@@ -13,11 +13,13 @@ public class PostItNote : MonoBehaviour
     public string CurrentSectionName;
     public string TaskId;
 
-    private string CollidedSection;
+    private string CollidedSectionName;
 
     public TextMeshProUGUI descriptionText;
 
     XRGrabInteractable m_GrabInteractable;
+
+    private Vector3 currentPosition;
 
     private void Awake()
     {
@@ -55,23 +57,25 @@ public class PostItNote : MonoBehaviour
 
     private void Dropped()
     {
-        if (!CollidedSection.IsNullOrEmpty())
+        if (!CollidedSectionName.IsNullOrEmpty())
         {
-            CurrentSectionName = CollidedSection;
-        }
-    }
+            if (CollidedSectionName != CurrentSectionName)
+            {
+                notesManager.NoteMoved(gameObject, CurrentSectionName, CollidedSectionName);
+            }
+            else
+            {
+                MoveToPosition(currentPosition);
+            }
 
-    Vector3 GetRandomPositionOffset(Vector3 sectionSize)
-    {
-        return new Vector3(
-            UnityEngine.Random.Range(-sectionSize.x / 2, sectionSize.x / 2),
-            UnityEngine.Random.Range(-sectionSize.y / 2, sectionSize.y / 2),
-            0);
+            CurrentSectionName = CollidedSectionName;
+        }
     }
 
     public void MoveToPosition(Vector3 position)
     {
-        StartCoroutine(MoveToPosition(position, 0.4f));
+        transform.rotation = Quaternion.Euler(0, 0, 0);
+        StartCoroutine(MoveToPosition(position, 0.6f));
     }
 
     IEnumerator MoveToPosition(Vector3 targetPosition, float duration)
@@ -87,14 +91,15 @@ public class PostItNote : MonoBehaviour
         }
 
         transform.position = targetPosition; // Ensure accurate final position
+        currentPosition = targetPosition;
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Section"))
         {
-            CollidedSection = other.name;
-            Debug.Log("Collided with section: " + CollidedSection);
+            CollidedSectionName = other.name;
+            Debug.Log("Collided with section: " + CollidedSectionName);
         }
     }
 }

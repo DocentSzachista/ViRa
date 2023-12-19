@@ -90,6 +90,7 @@ public class NotesManager : MonoBehaviour
                 );
             var postitScript = notes[i].GetComponent<PostItNote>();
             postitScript.MoveToPosition(newPosition);
+            //notes[i].transform.rotation = section.rotation;
         }
     }
 
@@ -123,6 +124,47 @@ public class NotesManager : MonoBehaviour
             Debug.LogWarning("Object to copy is not assigned!");
         }
         return newNote;
+    }
+
+    public void NoteMoved(GameObject note, string from, string to)
+    {
+        int originalId = -1;
+        switch (from)
+        {
+            case "To Do":
+                originalId = ToDoNotes.IndexOf(note);
+                ToDoNotes.Remove(note);
+                PlaceNotes(ToDoNotes, ToDoSection, originalId);
+                break;
+            case "In Progress":
+                originalId = DoingNotes.IndexOf(note);
+                DoingNotes.Remove(note);
+                PlaceNotes(DoingNotes, DoingSection, originalId);
+                break;
+            case "Done":
+                originalId = DoneNotes.IndexOf(note);
+                DoneNotes.Remove(note);
+                PlaceNotes(DoneNotes, DoneSection, originalId);
+                break;
+        }
+
+
+        switch (to)
+        {
+            case "To Do":
+                ToDoNotes.Add(note);
+                PlaceNotes(ToDoNotes, ToDoSection, ToDoNotes.Count-1);
+                break;
+            case "In Progress":
+                DoingNotes.Add(note);
+                PlaceNotes(DoingNotes, DoingSection, DoingNotes.Count-1);
+                break;
+            case "Done":
+                DoneNotes.Add(note);
+                PlaceNotes(DoneNotes, DoneSection, DoneNotes.Count-1);
+                break;
+        }
+
     }
 
     // Update is called once per frame

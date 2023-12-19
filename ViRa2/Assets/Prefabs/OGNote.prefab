@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8489127315025929758}
   - component: {fileID: 2435853592130132522}
   - component: {fileID: 4433004323956748042}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 4799936243776781817}
   - component: {fileID: 8872407091953637876}
   - component: {fileID: 6832271061258182082}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: OGNote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -402,7 +402,7 @@ GameObject:
   - component: {fileID: 2857709003455306724}
   - component: {fileID: 7543192013744865663}
   - component: {fileID: 2333365127877215339}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -527,7 +527,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c27d06a5c7df22648ae915c521a3502a, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
