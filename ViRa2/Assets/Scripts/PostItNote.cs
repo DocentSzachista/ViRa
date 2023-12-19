@@ -7,9 +7,17 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class PostItNote : MonoBehaviour
 {
+    public bool isNew;
+    public bool exitedBlock;
+
     public NotesManager notesManager;
 
-    public string Description { get; set; }
+    private string _description;
+    public string Description { get => _description; set
+        {
+            _description = value;
+            descriptionText.text = _description;
+        } }
     public string CurrentSectionName;
     public string TaskId;
 
@@ -31,16 +39,35 @@ public class PostItNote : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        descriptionText.text = Description;
-        if (CurrentSectionName.IsNullOrEmpty())
+        if (isNew && Description.IsNullOrEmpty())
         {
-            CurrentSectionName = "To Do";
+            Description = "New ViRa Note!";
+        }
+        descriptionText.text = Description;
+
+        if (isNew)
+        {
+            foreach(Transform child in transform)
+            {
+                child.gameObject.SetActive(false);
+            }
         }
     }
 
     private void OnEnable()
     {
         m_GrabInteractable.selectExited.AddListener(OnSelectExit);
+        m_GrabInteractable.selectEntered.AddListener(OnSelected);
+    }
+
+    private void OnSelected(SelectEnterEventArgs arg0)
+    {
+        if (!isNew) return;
+
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(true);
+        }
     }
 
     private void OnDisable()
@@ -59,7 +86,12 @@ public class PostItNote : MonoBehaviour
     {
         if (!CollidedSectionName.IsNullOrEmpty())
         {
-            if (CollidedSectionName != CurrentSectionName)
+            if (isNew)
+            {
+                notesManager.NoteCreated(gameObject, CollidedSectionName);
+                isNew = false;
+            }
+            else if (CollidedSectionName != CurrentSectionName)
             {
                 notesManager.NoteMoved(gameObject, CurrentSectionName, CollidedSectionName);
             }
@@ -103,7 +135,8 @@ public class PostItNote : MonoBehaviour
         }
         if (other.CompareTag("Trash"))
         {
-
+            notesManager.NoteTrashed(TaskId, CurrentSectionName);
+            Destroy(gameObject);
         }
     }
 }

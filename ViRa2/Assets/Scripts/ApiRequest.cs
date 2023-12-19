@@ -97,7 +97,7 @@ public class ApiRequest : MonoBehaviour
         }
     }
 
-    IEnumerator CreateIssue(CreateIssue createIssue)
+    public IEnumerator CreateIssue(CreateIssue createIssue, Action<string> callback)
     {
         string createIssueJson = JsonUtility.ToJson(createIssue);
         var url = apiUrl + $"issue";
@@ -121,6 +121,7 @@ public class ApiRequest : MonoBehaviour
                 Debug.Log("Response: " + responseData);
 
                 var receivedIssue = JsonUtility.FromJson<ReceivedAfterCreateIssue>(responseData);
+                callback(receivedIssue.id);
             }
         }
     }
@@ -209,7 +210,7 @@ public class ApiRequest : MonoBehaviour
         }
     }
 
-    IEnumerator DeleteIssue(string issueId)
+    public IEnumerator DeleteIssue(string issueId)
     {
         var url = apiUrl + $"issue/{issueId}";
 

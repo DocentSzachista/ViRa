@@ -129,6 +129,75 @@ public class NotesManager : MonoBehaviour
         return newNote;
     }
 
+    public void NoteCreated(GameObject note, string section)
+    {
+        CreateNote(note);
+        switch (section)
+        {
+            case "To Do":
+                ToDoNotes.Add(note); 
+                PlaceNotes(ToDoNotes, ToDoSection, ToDoNotes.Count - 1);
+                break;
+            case "In Progress":
+                DoingNotes.Add(note);
+                PlaceNotes(DoingNotes, DoingSection, DoingNotes.Count - 1);
+                break;
+            case "Done":
+                DoneNotes.Add(note);
+                PlaceNotes(DoneNotes, DoneSection, ToDoNotes.Count - 1);
+                break;
+        }
+    }
+
+    private void CreateNote(GameObject note)
+    {
+        string summary = note.GetComponent<PostItNote>().Description;
+
+        CreateIssue newIssue = new CreateIssue()
+        {
+            fields = new Assets.Scripts.Models.IssueProperties.CreateIssueFields()
+            {
+                summary = summary
+            }
+        };
+
+        void SetNoteId(string id)
+        {
+            note.GetComponent<PostItNote>().TaskId = id;
+            note.name = $"Note-{id}";
+        }
+
+        StartCoroutine(apiRequest.CreateIssue(newIssue, SetNoteId));
+    }
+
+    public void NoteTrashed(string id, string currentSection)
+    {
+        int originalId;
+        GameObject noteTrashed;
+        switch (currentSection)
+        {
+            case "To Do":
+                noteTrashed = ToDoNotes.Find(x => x.GetComponent<PostItNote>().TaskId == id);
+                originalId = ToDoNotes.IndexOf(noteTrashed);
+                ToDoNotes.Remove(noteTrashed);
+                PlaceNotes(ToDoNotes, ToDoSection, originalId);
+                break;
+            case "In Progress":
+                noteTrashed = DoingNotes.Find(x => x.GetComponent<PostItNote>().TaskId == id);
+                originalId = DoingNotes.IndexOf(noteTrashed);
+                DoingNotes.Remove(noteTrashed);
+                PlaceNotes(DoingNotes, DoingSection, originalId);
+                break;
+            case "Done":
+                noteTrashed = DoneNotes.Find(x => x.GetComponent<PostItNote>().TaskId == id);
+                originalId = DoneNotes.IndexOf(noteTrashed);
+                DoneNotes.Remove(noteTrashed);
+                PlaceNotes(DoneNotes, DoneSection, originalId);
+                break;
+        }
+        StartCoroutine(apiRequest.DeleteIssue(id));
+    }
+
     public void NoteMoved(GameObject note, string from, string to)
     {
         var postitScript = note.GetComponent<PostItNote>();
