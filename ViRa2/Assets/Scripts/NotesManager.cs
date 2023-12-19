@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
@@ -35,6 +36,8 @@ public class NotesManager : MonoBehaviour
 
     void FillBoard()
     {
+        StartCoroutine(apiRequest.GetAllTransitions());
+
         foreach (var issue in apiRequest.issues)
         {
             var note = CreateNote(issue);
@@ -128,6 +131,9 @@ public class NotesManager : MonoBehaviour
 
     public void NoteMoved(GameObject note, string from, string to)
     {
+        var postitScript = note.GetComponent<PostItNote>();
+        var issueId = postitScript.TaskId;
+
         int originalId = -1;
         switch (from)
         {
@@ -154,6 +160,7 @@ public class NotesManager : MonoBehaviour
             case "To Do":
                 ToDoNotes.Add(note);
                 PlaceNotes(ToDoNotes, ToDoSection, ToDoNotes.Count-1);
+                UpdateTransition(issueId, to);
                 break;
             case "In Progress":
                 DoingNotes.Add(note);
@@ -164,7 +171,26 @@ public class NotesManager : MonoBehaviour
                 PlaceNotes(DoneNotes, DoneSection, DoneNotes.Count-1);
                 break;
         }
+        UpdateTransition(issueId, to);
+    }
 
+    void UpdateTransition(string issueId, string transitionName)
+    {
+
+        switch (transitionName)
+        {
+            // Magic numbers! Whoohoo!
+            case "To Do":
+                StartCoroutine(apiRequest.UpdateTransitions(issueId, 11));
+                
+                break;
+            case "In Progress":
+                StartCoroutine(apiRequest.UpdateTransitions(issueId, 21));
+                break;
+            case "Done":
+                StartCoroutine(apiRequest.UpdateTransitions(issueId, 31));
+                break;
+        }
     }
 
     // Update is called once per frame

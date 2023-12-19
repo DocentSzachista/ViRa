@@ -101,5 +101,9 @@ public class PostItNote : MonoBehaviour
             CollidedSectionName = other.name;
             Debug.Log("Collided with section: " + CollidedSectionName);
         }
+        if (other.CompareTag("Trash"))
+        {
+
+        }
     }
 }

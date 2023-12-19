@@ -230,7 +230,7 @@ public class ApiRequest : MonoBehaviour
         }
     }
 
-    IEnumerator GetAllTransitions(string issueId = "10022")
+    public IEnumerator GetAllTransitions(string issueId = "10022")
     {
         var url = apiUrl + $"issue/{issueId}/transitions";
 
@@ -259,7 +259,7 @@ public class ApiRequest : MonoBehaviour
         }
     }
 
-    IEnumerator UpdateTransitions(string issueId = "10028", int transitionId = 11)
+    public IEnumerator UpdateTransitions(string issueId = "10028", int transitionId = 11)
     {
         var url = apiUrl + $"issue/{issueId}/transitions";
 
