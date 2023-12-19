@@ -22,8 +22,8 @@ public class ApiRequest : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        //StartCoroutine(GetAllIssues());
-        StartCoroutine(GetIssueById("10022"));
+        // StartCoroutine(GetAllIssues());
+        // StartCoroutine(GetIssueById("10022"));
         //StartCoroutine(GetAllTransitions());
         //StartCoroutine(CreateIssue(MockCreateIssueData()));
         //StartCoroutine(CreateIssueWithDescription(MockCreateIssueDataWithDescription()));
@@ -33,7 +33,11 @@ public class ApiRequest : MonoBehaviour
         //StartCoroutine(UpdateTransitions());
     }
 
-    IEnumerator GetAllIssues()
+        // Definicja delegatu do obsługi zdarzenia pobrania issues
+    public delegate void IssuesDownloadedHandler(List<Issue> issues);
+    public event IssuesDownloadedHandler OnIssuesDownloaded;
+
+    public IEnumerator GetAllIssues()
     {
         var url = apiUrl + "search?jql=project=VIRA";
 
@@ -63,6 +67,8 @@ public class ApiRequest : MonoBehaviour
                     issues.Add(issue);
                     Debug.Log("Id: " + issue.id + ", key: " + issue.key + ", summary: " + issue.summary + ", transition: " + issue.transitionName + ", desc: " + issue.description);
                 }
+
+                OnIssuesDownloaded?.Invoke(issues);
             }
         }
     }

@@ -2561,6 +2561,7 @@ MonoBehaviour:
   - {fileID: 834469223}
   - {fileID: 1408132982}
   - {fileID: 1034903719}
+  apiRequest: {fileID: 0}
   notesNumber: 20
   offset: 5
 --- !u!4 &310456204
@@ -16430,7 +16431,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 3.03057e-39, y: 2.265625, z: 6e-44, w: 3e-45}
+  m_BoundingSphereOverride: {x: 9.1835e-41, y: NaN, z: NaN, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
