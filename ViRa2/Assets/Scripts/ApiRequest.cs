@@ -2,6 +2,7 @@ using Assets.Scripts.Models.IssueProperties;
 using Assets.Scripts.Models.IssueProperties.DescriptionContents;
 using Assets.Scripts.Models.Issues;
 using Assets.Scripts.Models.Transitions;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -18,12 +19,13 @@ public class ApiRequest : MonoBehaviour
     private string apiKey = "";
 
     public Issue issue;
+    public List<Issue> issues;
 
     // Start is called before the first frame update
     public void Start()
     {
         //StartCoroutine(GetAllIssues());
-        StartCoroutine(GetIssueById("10022"));
+        //StartCoroutine(GetIssueById("10022"));
         //StartCoroutine(GetAllTransitions());
         //StartCoroutine(CreateIssue(MockCreateIssueData()));
         //StartCoroutine(CreateIssueWithDescription(MockCreateIssueDataWithDescription()));
@@ -33,7 +35,7 @@ public class ApiRequest : MonoBehaviour
         //StartCoroutine(UpdateTransitions());
     }
 
-    IEnumerator GetAllIssues()
+    public IEnumerator GetAllIssues(Action callback)
     {
         var url = apiUrl + "search?jql=project=VIRA";
 
@@ -55,7 +57,7 @@ public class ApiRequest : MonoBehaviour
 
                 var receivedIssues = JsonUtility.FromJson<ReceivedIssues>(responseData);
 
-                var issues = new List<Issue>();
+                issues = new List<Issue>();
 
                 foreach (ReceivedIssue receivedIssue in receivedIssues.issues)
                 {
@@ -65,6 +67,7 @@ public class ApiRequest : MonoBehaviour
                 }
             }
         }
+        callback();
     }
 
     IEnumerator GetIssueById(string issueId = "10022")
@@ -94,7 +97,7 @@ public class ApiRequest : MonoBehaviour
         }
     }
 
-    IEnumerator CreateIssue(CreateIssue createIssue)
+    public IEnumerator CreateIssue(CreateIssue createIssue, Action<string> callback)
     {
         string createIssueJson = JsonUtility.ToJson(createIssue);
         var url = apiUrl + $"issue";
@@ -118,6 +121,7 @@ public class ApiRequest : MonoBehaviour
                 Debug.Log("Response: " + responseData);
 
                 var receivedIssue = JsonUtility.FromJson<ReceivedAfterCreateIssue>(responseData);
+                callback(receivedIssue.id);
             }
         }
     }
@@ -206,7 +210,7 @@ public class ApiRequest : MonoBehaviour
         }
     }
 
-    IEnumerator DeleteIssue(string issueId)
+    public IEnumerator DeleteIssue(string issueId)
     {
         var url = apiUrl + $"issue/{issueId}";
 
@@ -227,7 +231,7 @@ public class ApiRequest : MonoBehaviour
         }
     }
 
-    IEnumerator GetAllTransitions(string issueId = "10022")
+    public IEnumerator GetAllTransitions(string issueId = "10022")
     {
         var url = apiUrl + $"issue/{issueId}/transitions";
 
@@ -256,7 +260,7 @@ public class ApiRequest : MonoBehaviour
         }
     }
 
-    IEnumerator UpdateTransitions(string issueId = "10028", int transitionId = 11)
+    public IEnumerator UpdateTransitions(string issueId = "10028", int transitionId = 11)
     {
         var url = apiUrl + $"issue/{issueId}/transitions";
 
