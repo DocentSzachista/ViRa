@@ -114,7 +114,7 @@ public class NotesManager : MonoBehaviour
             if (result)
             {
                 newNote.name = "Note-" + issue.id;
-                noteComponent.isSelected = false;
+                //noteComponent.isSelected = false;
                 noteComponent.Description = issue.summary;
                 noteComponent.TaskId = issue.id;
                 noteComponent.CurrentSectionName = issue.transitionName;
