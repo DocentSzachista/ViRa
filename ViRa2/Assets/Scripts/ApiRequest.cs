@@ -154,7 +154,7 @@ public class ApiRequest : MonoBehaviour
         }
     }
 
-    IEnumerator UpdateIssue(string issueId, UpdateIssue updateIssue)
+    public IEnumerator UpdateIssue(string issueId, UpdateIssue updateIssue)
     {
         string updateIssueJson = JsonUtility.ToJson(updateIssue);
         var url = apiUrl + $"issue/{issueId}";

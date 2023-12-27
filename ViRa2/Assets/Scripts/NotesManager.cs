@@ -1,4 +1,6 @@
 using Assets.Scripts.Models.Issues;
+using Microsoft.MixedReality.Toolkit.Experimental.UI;
+using OpenCover.Framework.Model;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,6 +18,7 @@ public class NotesManager : MonoBehaviour
     public Transform ToDoSection;
     public Transform DoingSection;
     public Transform DoneSection;
+    public NonNativeKeyboard keyboardRef;
 
     private List<GameObject> ToDoNotes;
     private List<GameObject> DoingNotes;
@@ -111,7 +114,7 @@ public class NotesManager : MonoBehaviour
             if (result)
             {
                 newNote.name = "Note-" + issue.id;
-                
+                //noteComponent.isSelected = false;
                 noteComponent.Description = issue.summary;
                 noteComponent.TaskId = issue.id;
                 noteComponent.CurrentSectionName = issue.transitionName;
@@ -197,6 +200,20 @@ public class NotesManager : MonoBehaviour
         }
         StartCoroutine(apiRequest.DeleteIssue(id));
     }
+
+    public void NoteEdited(string id, string currentText)
+    {
+        UpdateIssue updatedIssue = new UpdateIssue(){
+            fields = new Assets.Scripts.Models.IssueProperties.UpdateIssueFields()
+            {
+                summary = currentText
+            }
+        };
+
+        StartCoroutine(apiRequest.UpdateIssue(id, updatedIssue));   
+    }
+
+
 
     public void NoteMoved(GameObject note, string from, string to)
     {
