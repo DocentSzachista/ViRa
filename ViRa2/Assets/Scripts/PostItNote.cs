@@ -12,8 +12,7 @@ public class PostItNote : MonoBehaviour
 {
     public bool isNew;
     public bool exitedBlock;
-    public bool isSelected = false; 
-    // public NonNativeKeyboard keyboard;
+    //public bool isSelected = false; 
 
     public NotesManager notesManager;
 
@@ -90,8 +89,6 @@ public class PostItNote : MonoBehaviour
 
     private void OnSelected(SelectEnterEventArgs arg0)
     {
-        isSelected = true;
-        Debug.Log("Got card");
         notesManager.keyboardRef.OnTextSubmitted += Keyboard_OnTextSubmitted;
         notesManager.keyboardRef.PresentKeyboard();
         if (!isNew) return;
@@ -115,8 +112,6 @@ public class PostItNote : MonoBehaviour
 
     private void Dropped()
     {
-        isSelected = false;
-        Debug.Log("Dropped a card");
         notesManager.keyboardRef.OnTextSubmitted -= Keyboard_OnTextSubmitted;
         if (!CollidedSectionName.IsNullOrEmpty())
         {
@@ -127,8 +122,6 @@ public class PostItNote : MonoBehaviour
             }
             else if (!_oldText.Equals(Description))
             {
-                Debug.Log(Description);
-                Debug.Log(TaskId);
                 notesManager.NoteEdited(TaskId, Description);
             }
             else if (CollidedSectionName != CurrentSectionName)
