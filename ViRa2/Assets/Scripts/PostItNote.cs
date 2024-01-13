@@ -32,7 +32,7 @@ public class PostItNote : MonoBehaviour
     XRGrabInteractable m_GrabInteractable;
 
     private Vector3 currentPosition;
-    private string _oldText;
+    private string _oldText = "";
 
     private void Awake()
     {
@@ -49,7 +49,7 @@ public class PostItNote : MonoBehaviour
             Description = "New ViRa Note!";
         }
         descriptionText.text = Description;
-        _oldText = null;
+        _oldText = "";
         if (isNew)
         {
             foreach(Transform child in transform)
@@ -61,21 +61,13 @@ public class PostItNote : MonoBehaviour
 
     private void Keyboard_OnTextSubmitted(object sender, System.EventArgs e)
     {
-        //if (isSelected)
-        //{
-            // Sprawdź, czy nadawca zdarzenia to klawiatura
-            if (sender is NonNativeKeyboard keyboard)
-            {
-            // Pobierz tekst z pola TextInput
-                _oldText = Description;
-                Description = keyboard.InputField.text;
-                descriptionText.text += keyboard.InputField.text;
+        if (sender is NonNativeKeyboard keyboard)
+        {
+            _oldText = Description;
+            Description = keyboard.InputField.text;
 
-
-                // Tutaj możesz wykonać operacje na wprowadzonym tekście
-                Debug.Log("Entered text: " + descriptionText.text);
-            }
-        //}
+            Debug.Log("Entered text: " + descriptionText.text);
+        }
     }
 
 
@@ -120,10 +112,6 @@ public class PostItNote : MonoBehaviour
                 notesManager.NoteCreated(gameObject, CollidedSectionName);
                 isNew = false;
             }
-            else if (!_oldText.Equals(Description))
-            {
-                notesManager.NoteEdited(TaskId, Description);
-            }
             else if (CollidedSectionName != CurrentSectionName)
             {
                 notesManager.NoteMoved(gameObject, CurrentSectionName, CollidedSectionName);
@@ -134,6 +122,11 @@ public class PostItNote : MonoBehaviour
             }
 
             CurrentSectionName = CollidedSectionName;
+
+            if (_oldText == null || !_oldText.Equals(Description))
+            {
+                notesManager.NoteEdited(TaskId, Description);
+            }
         }
     }
 

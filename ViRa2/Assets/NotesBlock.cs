@@ -12,16 +12,16 @@ public class NotesBlock : MonoBehaviour
     public GameObject NewNotePrefab;
     public NotesManager notesManager;
 
-    private void OnTriggerExit(Collider other)
+    void OnTriggerExit(Collider other)
     {
         Debug.Log(other.name + " " + other.gameObject.name);
+        
+        var postIt = other.GetComponent<PostItNote>();
 
-
-        if (other.name.ToLower().Contains("newnote") &&
-            !other.GetComponent<PostItNote>().exitedBlock)
+        if (postIt != null && postIt.isNew && !postIt.exitedBlock)
         {
             CreateNewInvisibleNote();
-            other.GetComponent<PostItNote>().exitedBlock = true;
+            postIt.exitedBlock = true;
         }
     }
 
