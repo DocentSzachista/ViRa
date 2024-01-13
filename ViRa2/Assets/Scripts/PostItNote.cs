@@ -1,14 +1,18 @@
+﻿using Microsoft.MixedReality.Toolkit.Experimental.UI;
 using System;
 using System.Collections;
 using TMPro;
 using Unity.Tutorials.Core.Editor;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
+
 
 public class PostItNote : MonoBehaviour
 {
     public bool isNew;
     public bool exitedBlock;
+    //public bool isSelected = false; 
 
     public NotesManager notesManager;
 
@@ -28,6 +32,7 @@ public class PostItNote : MonoBehaviour
     XRGrabInteractable m_GrabInteractable;
 
     private Vector3 currentPosition;
+    private string _oldText;
 
     private void Awake()
     {
@@ -44,7 +49,7 @@ public class PostItNote : MonoBehaviour
             Description = "New ViRa Note!";
         }
         descriptionText.text = Description;
-
+        _oldText = null;
         if (isNew)
         {
             foreach(Transform child in transform)
@@ -54,6 +59,28 @@ public class PostItNote : MonoBehaviour
         }
     }
 
+    private void Keyboard_OnTextSubmitted(object sender, System.EventArgs e)
+    {
+        //if (isSelected)
+        //{
+            // Sprawdź, czy nadawca zdarzenia to klawiatura
+            if (sender is NonNativeKeyboard keyboard)
+            {
+            // Pobierz tekst z pola TextInput
+                _oldText = Description;
+                Description = keyboard.InputField.text;
+                descriptionText.text += keyboard.InputField.text;
+
+
+                // Tutaj możesz wykonać operacje na wprowadzonym tekście
+                Debug.Log("Entered text: " + descriptionText.text);
+            }
+        //}
+    }
+
+
+
+
     private void OnEnable()
     {
         m_GrabInteractable.selectExited.AddListener(OnSelectExit);
@@ -62,8 +89,9 @@ public class PostItNote : MonoBehaviour
 
     private void OnSelected(SelectEnterEventArgs arg0)
     {
+        notesManager.keyboardRef.OnTextSubmitted += Keyboard_OnTextSubmitted;
+        notesManager.keyboardRef.PresentKeyboard();
         if (!isNew) return;
-
         foreach (Transform child in transform)
         {
             child.gameObject.SetActive(true);
@@ -84,12 +112,17 @@ public class PostItNote : MonoBehaviour
 
     private void Dropped()
     {
+        notesManager.keyboardRef.OnTextSubmitted -= Keyboard_OnTextSubmitted;
         if (!CollidedSectionName.IsNullOrEmpty())
         {
             if (isNew)
             {
                 notesManager.NoteCreated(gameObject, CollidedSectionName);
                 isNew = false;
+            }
+            else if (!_oldText.Equals(Description))
+            {
+                notesManager.NoteEdited(TaskId, Description);
             }
             else if (CollidedSectionName != CurrentSectionName)
             {
